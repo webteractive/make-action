@@ -17,6 +17,7 @@ The package will be built upon the `spatie/package-skeleton-laravel` skeleton, e
 -   **Namespace Handling:** Correctly sets the namespace for the generated class (e.g., `Webteractive\MakeAction\Actions`).
 -   **Customizable Method Name:** Allow configuration of the default method name (e.g., `execute` instead of `handle`) via the package's config file.
 -   Use **Laravel Prompts** for asking the class name if the class name is not supplied.
+-   **Output Path:** After generation, the command will output the full path to the newly created action class file.
 
 ## Technical Specifications
 

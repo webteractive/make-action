@@ -2,9 +2,9 @@
 
 namespace Webteractive\MakeAction\Tests;
 
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\File;
 use PHPUnit\Framework\Attributes\Test;
+use Illuminate\Support\Facades\Artisan;
 
 class MakeActionCommandTest extends TestCase
 {

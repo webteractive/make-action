@@ -2,11 +2,12 @@
 
 namespace Webteractive\MakeAction\Commands;
 
-use Illuminate\Console\Command;
-use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Str;
+use Illuminate\Console\Command;
 
 use function Laravel\Prompts\text;
+
+use Illuminate\Filesystem\Filesystem;
 
 class MakeActionCommand extends Command
 {
@@ -54,6 +55,7 @@ class MakeActionCommand extends Command
         $this->files->put($path, $stub);
 
         $this->info('Action created successfully.');
+        $this->info("Action path: {$path}");
 
         return self::SUCCESS;
     }
