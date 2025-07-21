@@ -6,9 +6,11 @@ use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Str;
 
+use function Laravel\Prompts\text;
+
 class MakeActionCommand extends Command
 {
-    public $signature = 'make:action {name}';
+    public $signature = 'make:action {name?}';
 
     public $description = 'Create a new action class';
 
@@ -22,7 +24,12 @@ class MakeActionCommand extends Command
 
     public function handle(): int
     {
-        $name = $this->argument('name');
+        $name = $this->argument('name') ?? text(
+            label: 'What should the action be named?',
+            placeholder: 'E.g. CreateNewUser',
+            required: true,
+        );
+
         $className = Str::studly($name);
 
         $path = app_path('Actions/'.$className.'.php');

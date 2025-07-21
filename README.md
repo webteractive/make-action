@@ -1,10 +1,5 @@
 # Laravel make:action Command
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/webteractive/make-action.svg?style=flat-square)](https://packagist.org/packages/webteractive/make-action)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/webteractive/make-action/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/webteractive/make-action/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/webteractive/make-action/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/webteractive/make-action/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/webteractive/make-action.svg?style=flat-square)](https://packagist.org/packages/webteractive/make-action)
-
 This Laravel package provides a `php artisan make:action` command to quickly scaffold "Action" classes. This encourages organized and reusable business logic.
 
 ## Installation
