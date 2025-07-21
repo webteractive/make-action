@@ -16,16 +16,11 @@
     backupStaticProperties="false"
 >
     <testsuites>
-        <testsuite name="Glen Bangkila Test Suite">
+        <testsuite name="Webteractive Test Suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>
     <logging>
         <junit outputFile="build/report.junit.xml"/>
     </logging>
-    <source>
-        <include>
-            <directory suffix=".php">./src</directory>
-        </include>
-    </source>
 </phpunit>

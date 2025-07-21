@@ -1,11 +1,11 @@
-# This is my package make-action
+# Laravel make:action Command
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v//make-action.svg?style=flat-square)](https://packagist.org/packages//make-action)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status//make-action/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com//make-action/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status//make-action/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com//make-action/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt//make-action.svg?style=flat-square)](https://packagist.org/packages//make-action)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/webteractive/make-action.svg?style=flat-square)](https://packagist.org/packages/webteractive/make-action)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/webteractive/make-action/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/webteractive/make-action/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/webteractive/make-action/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/webteractive/make-action/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/webteractive/make-action.svg?style=flat-square)](https://packagist.org/packages/webteractive/make-action)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+This Laravel package provides a `php artisan make:action` command to quickly scaffold "Action" classes. This encourages organized and reusable business logic.
 
 ## Support us
 
@@ -20,14 +20,7 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 You can install the package via composer:
 
 ```bash
-composer require /make-action
-```
-
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="make-action-migrations"
-php artisan migrate
+composer require webteractive/make-action
 ```
 
 You can publish the config file with:
@@ -39,21 +32,43 @@ php artisan vendor:publish --tag="make-action-config"
 This is the contents of the published config file:
 
 ```php
+// config for Webteractive/MakeAction
 return [
+    'method_name' => 'handle',
 ];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="make-action-views"
 ```
 
 ## Usage
 
+To create a new action class, run the `make:action` Artisan command:
+
+```bash
+php artisan make:action CreateNewUser
+```
+
+This will create a new action class at `app/Actions/CreateNewUser.php`:
+
 ```php
-$makeAction = new Glen Bangkila\MakeAction();
-echo $makeAction->echoPhrase('Hello, Glen Bangkila!');
+<?php
+
+namespace App\Actions;
+
+class CreateNewUser
+{
+    public function handle()
+    {
+        // TODO: Implement the action logic.
+    }
+}
+```
+
+You can customize the default method name (`handle`) by changing the `method_name` value in the `config/make-action.php` file:
+
+```php
+// config for Webteractive/MakeAction
+return [
+    'method_name' => 'execute',
+];
 ```
 
 ## Testing

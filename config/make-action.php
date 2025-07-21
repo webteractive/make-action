@@ -1,6 +1,6 @@
 <?php
 
-// config for Glen Bangkila/MakeAction
+// config for Webteractive/MakeAction
 return [
-
+    'method_name' => 'handle',
 ];
