@@ -78,3 +78,8 @@ Refer to `TODO.md` for the development plan and progress.
     -   Ensure the `app/Actions` directory exists.
     -   Write the new class file to the destination.
 5.  **Verify (Standards):** VERY IMPORTANT: After making code changes, execute the project-specific build, linting and type-checking commands (e.g., 'tsc', 'npm run lint', 'ruff check .', 'vendor/bin/pint') that you have identified for this project (or obtained from the user). This ensures code quality and adherence to standards. If unsure about these commands, you can ask the user if they'd like you to run them and if so how to.
+
+## Release Process
+
+-   Always run composer format
+-   Always update `CHANGELOG.md` for all changes made.
