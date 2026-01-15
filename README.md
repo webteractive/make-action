@@ -62,13 +62,31 @@ return [
 
 This package includes AI guidelines for [Laravel Boost](https://github.com/laravel/boost), providing AI agents with context on how to properly use the `make:action` command.
 
-When you install Laravel Boost in your application, these guidelines are automatically discovered and included in your AI context, helping AI coding assistants:
+### Enabling Boost Guidelines
+
+To include this package's guidelines in your AI context:
+
+1. Add to your `boost.json`:
+   ```json
+   {
+       "guidelines": [
+           "webteractive/make-action"
+       ]
+   }
+   ```
+
+2. Update Boost:
+   ```bash
+   php artisan boost:update
+   ```
+
+Once enabled, AI coding assistants will:
 
 - Generate correct `make:action` commands
 - Create action classes following Laravel conventions
 - Provide appropriate examples when working with the action pattern
 
-The guidelines are located at `resources/boost/guidelines/core.blade.php` and are automatically included when users run `php artisan boost:install`.
+The guidelines are automatically discovered from `resources/boost/guidelines/core.blade.php` when you opt-in.
 
 ## Testing
 
