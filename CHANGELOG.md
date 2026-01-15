@@ -2,7 +2,7 @@
 
 All notable changes to `make-action` will be documented in this file.
 
-## Unreleased
+## 1.3.0 - 2026-01-15
 
 - Added Laravel Boost support with AI guidelines for better AI-assisted development.
 - Added tests for Boost guidelines file.
