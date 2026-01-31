@@ -54,4 +54,39 @@ class BoostGuidelinesTest extends TestCase
         $this->assertStringContainsString('config/make-action.php', $content);
         $this->assertStringContainsString('method_name', $content);
     }
+
+    #[Test]
+    public function it_includes_filament_guidelines_file()
+    {
+        $guidelinesPath = __DIR__.'/../resources/boost/guidelines/filament.blade.php';
+
+        $this->assertTrue(
+            File::exists($guidelinesPath),
+            'Filament guidelines file should exist at resources/boost/guidelines/filament.blade.php'
+        );
+    }
+
+    #[Test]
+    public function filament_guidelines_contains_required_sections()
+    {
+        $guidelinesPath = __DIR__.'/../resources/boost/guidelines/filament.blade.php';
+        $content = File::get($guidelinesPath);
+
+        $this->assertStringContainsString('## Using Actions with Filament', $content);
+        $this->assertStringContainsString('### Actions in Filament Context', $content);
+        $this->assertStringContainsString('### Common Patterns', $content);
+        $this->assertStringContainsString('### Best Practices for Filament Projects', $content);
+    }
+
+    #[Test]
+    public function filament_guidelines_contains_filament_code_examples()
+    {
+        $guidelinesPath = __DIR__.'/../resources/boost/guidelines/filament.blade.php';
+        $content = File::get($guidelinesPath);
+
+        $this->assertStringContainsString('Filament\Tables\Actions\Action', $content);
+        $this->assertStringContainsString('<code-snippet', $content);
+        $this->assertStringContainsString('@verbatim', $content);
+        $this->assertStringContainsString('Filament v4 and v5', $content);
+    }
 }

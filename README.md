@@ -2,6 +2,18 @@
 
 This Laravel package provides a `php artisan make:action` command to quickly scaffold "Action" classes. This encourages organized and reusable business logic.
 
+## Compatibility
+
+This package is tested and compatible with:
+
+| Laravel | PHP | Filament |
+|---------|-----|----------|
+| 12.x | 8.3, 8.4 | 5.x |
+| 11.x | 8.3, 8.4 | 4.x, 5.x |
+| 10.x | 8.3, 8.4 | 4.x |
+
+The package works seamlessly alongside Filament projects without any conflicts.
+
 ## Installation
 
 You can install the package via composer:
