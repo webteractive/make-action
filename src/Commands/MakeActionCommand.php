@@ -2,12 +2,13 @@
 
 namespace Webteractive\MakeAction\Commands;
 
-use Illuminate\Console\Command;
-use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
+use Illuminate\Console\Command;
 
 use function Laravel\Prompts\text;
+
+use Illuminate\Filesystem\Filesystem;
 
 class MakeActionCommand extends Command
 {
@@ -41,6 +42,7 @@ class MakeActionCommand extends Command
 
         if (! $this->isValidClassName($className)) {
             $this->error("Invalid action class name [{$name}]. Use a valid PHP class name.");
+
             return self::FAILURE;
         }
 
@@ -56,32 +58,37 @@ class MakeActionCommand extends Command
 
         if (! $this->isValidMethodName($method)) {
             $this->error("Invalid method name [{$method}].");
+
             return self::FAILURE;
         }
 
         if (! $this->isValidNamespace($namespace)) {
             $this->error("Invalid namespace [{$namespace}].");
+
             return self::FAILURE;
         }
 
-        $path = rtrim($directory, '/\\') . DIRECTORY_SEPARATOR . $className . '.php';
+        $path = rtrim($directory, '/\\').DIRECTORY_SEPARATOR.$className.'.php';
 
         // 🚫 No force support — always fail if exists
         if ($this->files->exists($path)) {
             $this->error('Action already exists.');
             $this->line("Path: {$path}");
+
             return self::FAILURE;
         }
 
         if (! $this->ensureDirectoryExists($directory)) {
             $this->error("Unable to create directory: {$directory}");
+
             return self::FAILURE;
         }
 
-        $stubPath = __DIR__ . '/../../stubs/action.stub';
+        $stubPath = __DIR__.'/../../stubs/action.stub';
 
         if (! $this->files->exists($stubPath)) {
             $this->error("Stub file not found: {$stubPath}");
+
             return self::FAILURE;
         }
 
@@ -120,7 +127,7 @@ class MakeActionCommand extends Command
 
                 $available = array_keys($targets);
                 if ($available) {
-                    $this->line('Available targets: ' . implode(', ', $available));
+                    $this->line('Available targets: '.implode(', ', $available));
                 }
 
                 return null;

@@ -2,9 +2,9 @@
 
 namespace Webteractive\MakeAction\Tests;
 
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\File;
 use PHPUnit\Framework\Attributes\Test;
+use Illuminate\Support\Facades\Artisan;
 
 class MakeActionCommandTest extends TestCase
 {
@@ -47,7 +47,6 @@ class MakeActionCommandTest extends TestCase
 
         File::delete($expectedPath);
     }
-
 
     #[Test]
     public function it_can_create_an_action_class_using_custom_path_and_namespace_overrides(): void
