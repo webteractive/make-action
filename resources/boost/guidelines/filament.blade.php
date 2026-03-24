@@ -83,5 +83,6 @@ class CreateUserResource extends CreateRecord
 
 - Keep Filament UI Actions (buttons, modals) thin - delegate business logic to action classes
 - Use dependency injection in action constructors for services needed by the action
+- Only use `app(SomeAction::class)->handle(...)` when the action has constructor dependencies that need to be resolved. For simple actions without constructor dependencies, use `(new SomeAction)->handle(...)` instead.
 - Action classes can be easily tested in isolation, independent of Filament UI
 - Share action classes between Filament admin panel and API endpoints for consistency

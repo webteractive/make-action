@@ -78,5 +78,6 @@ class UserController extends Controller
 
 - Keep actions focused on a single responsibility (Single Responsibility Principle).
 - Use dependency injection in action constructors for services and repositories.
+- Only use `app(SomeAction::class)->handle(...)` when the action has constructor dependencies that need to be resolved. For simple actions without constructor dependencies, use `(new SomeAction)->handle(...)` instead.
 - Actions are ideal for encapsulating complex business logic that doesn't belong in controllers or models.
 - Consider using actions for operations like: user registration, payment processing, report generation, data imports, etc.
