@@ -2,6 +2,15 @@
 
 All notable changes to `make-action` will be documented in this file.
 
+## v1.3.1 - 2026-03-24
+
+### What's Changed
+
+* build(deps): Bump stefanzweifel/git-auto-commit-action from 6 to 7 by @dependabot[bot] in https://github.com/webteractive/make-action/pull/5
+* build(deps): Bump actions/checkout from 4 to 6 by @dependabot[bot] in https://github.com/webteractive/make-action/pull/6
+
+**Full Changelog**: https://github.com/webteractive/make-action/compare/v1.3.0...v1.3.1
+
 ## Unreleased
 
 ### What's Changed
