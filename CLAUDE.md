@@ -29,9 +29,9 @@ vendor/bin/pest --filter="test name here"
 
 ## Compatibility
 
-- PHP 8.3+, Laravel 10–12
+- PHP 8.3+, Laravel 10–13 (Laravel 13 requires PHP 8.4+)
 - Filament v4 and v5 (tested in CI, no direct dependency)
-- CI matrix runs: PHP 8.3/8.4 × Laravel 10/11/12 × prefer-lowest/prefer-stable × ubuntu/windows, plus separate Filament v4/v5 jobs
+- CI matrix runs: PHP 8.3/8.4 × Laravel 10/11/12/13 × prefer-lowest/prefer-stable × ubuntu/windows, plus separate Filament v4/v5 jobs
 
 ## Key Conventions
 

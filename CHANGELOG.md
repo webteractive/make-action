@@ -15,6 +15,8 @@ All notable changes to `make-action` will be documented in this file.
 
 ### What's Changed
 
+- Added Laravel 13 support (requires PHP 8.4+, Testbench 11)
+- Added Laravel 13 + Filament v5 compatibility testing to CI workflow
 - Added Filament v5 compatibility testing to CI workflow
 - Added Filament v4 compatibility testing to CI workflow
 - Added Filament-specific Boost guidelines for AI agents working with Filament projects

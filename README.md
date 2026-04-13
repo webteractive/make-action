@@ -8,6 +8,7 @@ This package is tested and compatible with:
 
 | Laravel | PHP | Filament |
 |---------|-----|----------|
+| 13.x | 8.4 | 5.x |
 | 12.x | 8.3, 8.4 | 5.x |
 | 11.x | 8.3, 8.4 | 4.x, 5.x |
 | 10.x | 8.3, 8.4 | 4.x |
