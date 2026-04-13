@@ -2,16 +2,7 @@
 
 All notable changes to `make-action` will be documented in this file.
 
-## v1.3.1 - 2026-03-24
-
-### What's Changed
-
-* build(deps): Bump stefanzweifel/git-auto-commit-action from 6 to 7 by @dependabot[bot] in https://github.com/webteractive/make-action/pull/5
-* build(deps): Bump actions/checkout from 4 to 6 by @dependabot[bot] in https://github.com/webteractive/make-action/pull/6
-
-**Full Changelog**: https://github.com/webteractive/make-action/compare/v1.3.0...v1.3.1
-
-## Unreleased
+## v1.4.0 - 2026-04-14
 
 ### What's Changed
 
@@ -21,10 +12,23 @@ All notable changes to `make-action` will be documented in this file.
 - Added Filament v4 compatibility testing to CI workflow
 - Added Filament-specific Boost guidelines for AI agents working with Filament projects
 - Updated README with compatibility matrix including Filament versions
+- Added Boost integration guide
+- Added .DS_Store to .gitignore
 
 ### Filament Support
 
 This release ensures the package works seamlessly with Filament v4 and v5 projects. The package has no conflicts with Filament dependencies and is now tested alongside Filament in CI. New Boost guidelines help AI agents understand how to use action classes effectively in Filament resources, pages, and widgets.
+
+**Full Changelog**: https://github.com/webteractive/make-action/compare/v1.3.1...v1.4.0
+
+## v1.3.1 - 2026-03-24
+
+### What's Changed
+
+* build(deps): Bump stefanzweifel/git-auto-commit-action from 6 to 7 by @dependabot[bot] in https://github.com/webteractive/make-action/pull/5
+* build(deps): Bump actions/checkout from 4 to 6 by @dependabot[bot] in https://github.com/webteractive/make-action/pull/6
+
+**Full Changelog**: https://github.com/webteractive/make-action/compare/v1.3.0...v1.3.1
 
 ## v1.3.0 - 2026-01-15
 
