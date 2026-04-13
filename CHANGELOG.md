@@ -2,6 +2,23 @@
 
 All notable changes to `make-action` will be documented in this file.
 
+## Release 1.4.0 - 2026-04-13
+
+### Added
+
+- Laravel 13 support (requires PHP 8.4+, Testbench 11)
+- Laravel 13 + Filament v5 compatibility testing in CI
+- Filament v4 and v5 compatibility testing in CI
+- Filament-specific Boost guidelines for AI agents
+- Boost integration guide
+- .DS_Store to .gitignore
+
+### Filament Support
+
+The package now works seamlessly with Filament v4 and v5 projects, tested alongside Filament in CI. New Boost guidelines help AI agents use action classes effectively in Filament resources, pages, and widgets.
+
+**Full Changelog**: https://github.com/webteractive/make-action/compare/v1.3.1...v1.4.0
+
 ## v1.4.0 - 2026-04-14
 
 ### What's Changed
